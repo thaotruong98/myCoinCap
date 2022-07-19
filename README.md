@@ -7,7 +7,7 @@ With project cloned locally, Run containers with Docker to connect to MongoDB. A
 
 Use gradle to run application. (Port 8080)
 
-I've provided a POSTMAN collection to view available endpoints: https://www.getpostman.com/collections/3cc970fc58aaa9c88ed9
+I've provided a POSTMAN collection to view available endpoints above: Please see 'MyWallet.postman_collection.json'
 
 
 # Documentation
