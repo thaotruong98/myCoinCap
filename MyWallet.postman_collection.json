@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "bba6ff8d-f7f9-46b9-bcbb-725709528ce4",
+		"name": "MyWallet",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7817357"
+	},
+	"item": [
+		{
+			"name": "Get Assets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/myCoinCap/v1/assets?ids=bitcoin,ethereum&limit=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myCoinCap",
+						"v1",
+						"assets"
+					],
+					"query": [
+						{
+							"key": "ids",
+							"value": "bitcoin,ethereum"
+						},
+						{
+							"key": "limit",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Asset",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/myCoinCap/v1/assets/bitcoin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myCoinCap",
+						"v1",
+						"assets",
+						"bitcoin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Wallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"123450\",\r\n    \"assets\": {\r\n        \"bitcoin\": 1,\r\n        \"ethereum\": 2\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/myCoinCap/v1/wallet/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myCoinCap",
+						"v1",
+						"wallet",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Wallet Assets",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"0007\",\r\n    \"assets\": {\r\n        \"bitcoin\": 11,\r\n        \"ethereum\": 5.5\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/myCoinCap/v1/wallet/edit",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myCoinCap",
+						"v1",
+						"wallet",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Current Wallet Value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/myCoinCap/v1/wallet/value/0007",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myCoinCap",
+						"v1",
+						"wallet",
+						"value",
+						"0007"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Historic Wallet Value",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/myCoinCap/v1/wallet/history/0007/day/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"myCoinCap",
+						"v1",
+						"wallet",
+						"history",
+						"0007",
+						"day",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
